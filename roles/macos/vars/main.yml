@@ -1,0 +1,108 @@
+---
+macos_defaults:
+  #===== Global settings =====
+  # Make key repeat fastest
+  - domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 10
+
+  # Make key repeat fastest
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 1
+
+  # Do not upload documents to iCloud
+  - domain: NSGlobalDomain
+    key: NSDocumentSaveNewDocumentsToCloud
+    type: bool
+    value: false
+
+  # Show all file extensions
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+    notify: Restart Finder
+
+  # Make Trackpad's tracking speed fastest
+  - domain: NSGlobalDomain
+    key: com.apple.trackpad.scaling
+    type: float
+    value: 3
+  
+  # Prevent photos from opening automatically when devices was plugged in
+  - domain: com.apple.ImageCapture
+    key: disableHotPlug
+    type: bool
+    value: true
+
+  # Disable Dashboard 
+  - domain: com.apple.dashboard
+    key: mcx-disabled
+    type: bool
+    value: true
+
+  # Datetime format
+  - domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "M\u6708d\u65e5(EEE) H:mm:ss"
+  
+  #===== Dock =====
+  # Turn hiding on
+  - domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    notify: Restart Dock
+
+  # tilesize
+  - domain: com.apple.dock
+    key: tilesize
+    type: int
+    value: 50
+    notify: Restart Dock
+
+  # magnification off
+  - domain: com.apple.dock
+    key: magnification
+    type: bool
+    value: false
+    notify: Restart Dock
+
+  # Set position on screen
+  - domain: com.apple.dock
+    key: orientation
+    type: string
+    value: "left"
+    notify: Restart Dock
+
+  # Set springboard columns
+  - domain: com.apple.dock
+    key: springboard-columns
+    type: int
+    value: 10
+    notify: Restart Dock
+
+  # Set springboard rows
+  - domain: com.apple.dock
+    key: springboard-rows
+    type: int
+    value: 5
+    notify: Restart Dock
+
+  # Hot corners
+  - domain: com.apple.dock
+    key: wvous-br-corner
+    type: int
+    value: 10
+    notify: Restart Dock
+
+  # Hot corners
+  - domain: com.apple.dock
+    key: wvous-br-modifier
+    type: int
+    value: 0
+    notify: Restart Dock

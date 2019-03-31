@@ -1,0 +1,12 @@
+---
+- name: update Homebrew itself
+  homebrew:
+    update_homebrew: yes
+  tags: homebrew-update
+
+- name: install Homebrew formula
+  homebrew:
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ homebrew.formula }}'
+  tags: homebrew-install

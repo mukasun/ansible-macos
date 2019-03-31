@@ -1,0 +1,136 @@
+#!/usr/bin/env bash
+set -e -u
+
+# Configurations
+GHUSER=${GHUSER:-mks1412}
+REPO=${REPO:-ansible-macos}
+DEST=${DEST:-${HOME}/src/github/${GHUSER}}
+DIR="${DEST}/${REPO}"
+SSH_KEY_TYPE=${SSH_KEY_TYPE:-ed25519}
+SSH_KEY_PATH=$HOME/.ssh/id_$SSH_KEY_TYPE
+
+
+# Show variables
+show_variables() {
+  echo "Configurations:"
+  echo "    - Username:     ${GHUSER}"
+  echo "    - Repository:   ${REPO}"
+  echo "    - Destination:  ${DEST}"
+  echo "    - SSH key type: ${SSH_KEY_TYPE}"
+}
+
+# Show ~/Library folder
+configure() {
+  echo "Setting to show ~/Library..."
+  chflags nohidden ~/Library
+  echo "Turning off startup chime..."
+  sudo nvram SystemAudioVolume=" "
+}
+
+# Generate SSH Key
+generate_ssh_key() {
+  if [[ -f "$SSH_KEY_PATH" ]]; then
+    echo "Your SSH key already exists."
+    return
+  fi
+
+  echo "Generating a SSH key..."
+  read -p "Type your email address: " email
+  ssh-keygen -t "$SSH_KEY_TYPE" -C "$email"
+
+  echo "Adding your SSH key to your ssh-agent..."
+  eval "$(ssh-agent -s)"
+  ssh-add "$SSH_KEY_PATH"
+}
+
+# Prompt the confirmation of adding the SSH key to GitHub
+prompt_confirmation() {
+  echo "Copying your SSH public key into your clipboard..."
+  pbcopy < "$SSH_KEY_PATH.pub"
+
+  echo "Now you should add the generated key to GitHub before proceeding."
+  while true; do
+    read -p "Are you sure you want to proceed? [Y/n] " yn
+    case $yn in
+      [Yy]*|'')
+        echo "Proceeding..."
+        break
+        ;;
+      [Nn]*)
+        echo "Stopped."
+        exit 1
+        ;;
+    esac
+  done
+}
+
+# Install Command Line Tools
+install_command_line_tools() {
+  if [[ -d /Library/Developer/CommandLineTools ]]; then
+    echo "Command Line Tools is already installed."
+    return
+  fi
+
+  echo "Installing Command Line Tools..."
+  echo "*** If a dialog is shown, push 'Install' button to install Command Line Tools before proceeding! ***"
+  xcode-select --install
+}
+
+# Install Homebrew
+install_homebrew() {
+  if [[ -f /usr/local/bin/brew ]]; then
+    echo "Homebrew is already installed."
+    return
+  fi
+
+  echo "Installing Homebrew..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  echo "Running 'brew doctor'..."
+  brew doctor
+}
+
+# Install packages for running Ansible playbook
+install_packages_for_ansible() {
+  echo "Installing packages for running Ansible..."
+  brew install git ansible
+}
+
+# Clone my GitHub repository
+clone_repo() {
+  if [[ -d "${DIR}" ]]; then
+    echo "Repository already exists."
+    return
+  fi
+
+  git clone git@github.com:${GHUSER}/${REPO}.git ${DIR}
+  cd ${DIR}
+}
+
+# Provision
+provision() {
+  cd ${DEST}/${REPO}
+  echo "Start provisioning..."
+  ansible-playbook playbook.yml
+
+  echo "Initialization has been completed successfully."
+  echo "To start provisioning, run"
+  echo
+  echo "  \$ cd ${DIR}"
+  echo '  $ GOPATH=~ ansible-playbook playbook.yml'
+}
+
+# Run the above functions
+run() {
+  show_variables
+  configure
+  generate_ssh_key
+  prompt_confirmation
+  install_command_line_tools
+  install_homebrew
+  install_packages_for_ansible
+  clone_repo
+  provision
+}
+
+run

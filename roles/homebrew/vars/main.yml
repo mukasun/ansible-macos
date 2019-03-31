@@ -1,0 +1,19 @@
+---
+homebrew:
+  formula:
+    - ansible
+    - awscli
+    - colordiff
+    - direnv
+    - fontconfig
+    - git
+    - jq
+    - nkf
+    - node
+    - nodebrew
+    - peco
+    - pyenv
+    - rbenv
+    - tree
+    - yarn
+    - zsh

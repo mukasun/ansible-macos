@@ -1,0 +1,13 @@
+---
+- hosts: macos-machine
+  roles:
+    - role: dotfiles
+      tags: dotfiles
+    - role: git
+      tags: git
+    - role: homebrew
+      tags: homebrew
+    - role: homebrew_cask
+      tags: homebrew_cask
+    - role: macos
+      tags: macos
