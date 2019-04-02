@@ -3,6 +3,10 @@
 This playbook provides automatic installation of:
 
 - Homebrew / Cask packages
+- Font for terminal(Ricty)
+- MacOS default system setting
+- git
+- zsh
 
 on your macOS.
 
