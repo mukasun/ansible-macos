@@ -3,6 +3,8 @@
   roles:
     - role: dotfiles
       tags: dotfiles
+    - role: font
+      tags: font
     - role: git
       tags: git
     - role: homebrew
@@ -11,3 +13,5 @@
       tags: homebrew_cask
     - role: macos
       tags: macos
+    - role: zsh
+      tags: zsh

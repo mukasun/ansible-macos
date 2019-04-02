@@ -1,4 +1,3 @@
----
 dotfiles:
   repo: ssh://git@github.com/mks1412/dotfiles.git
   dir: ~/src/github/mks1412/dotfiles

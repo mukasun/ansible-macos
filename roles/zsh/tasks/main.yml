@@ -1,0 +1,12 @@
+- name: clone prezto repo
+  git:
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: ~/.zprezto
+  tags: prezto-clone
+
+- name: generate prezto config files
+  shell: setopt EXTENDED_GLOB && for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done
+  args:
+    executable: /usr/local/bin/zsh
+
+

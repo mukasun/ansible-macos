@@ -1,4 +1,3 @@
----
 homebrew:
   taps:
     - caskroom/versions # needed to install IntelliJ IDEA Community Edition

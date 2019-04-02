@@ -1,4 +1,3 @@
----
 - name: Configure macOS defaults
   osx_defaults:
     domain: '{{ item.domain }}'
