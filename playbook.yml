@@ -1,4 +1,3 @@
----
 - hosts: macos-machine
   roles:
     - role: dotfiles
@@ -13,5 +12,7 @@
       tags: homebrew_cask
     - role: macos
       tags: macos
+    - role: vscode
+      tags: vscode
     - role: zsh
       tags: zsh

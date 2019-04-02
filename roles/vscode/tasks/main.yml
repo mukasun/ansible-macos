@@ -1,0 +1,15 @@
+- name: deploy settings.json
+  template:
+    src: settings.json
+    dest: "~/Library/Application Support/Code/User"
+    mode: 0644
+
+- name: install extension
+  raw: "code --install-extension {{ item }}"
+  with_items: '{{ extensions }}'
+
+- name: deploy projects.json
+  template:
+    src: projects.json
+    dest: "~/Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json"
+    mode: 0644

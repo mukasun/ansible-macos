@@ -109,7 +109,7 @@ clone_repo() {
 
 # Provision
 provision() {
-  cd ${DEST}/${REPO}
+  cd ${DIR}
   echo "Start provisioning..."
   ansible-playbook playbook.yml
 

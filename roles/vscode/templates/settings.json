@@ -1,0 +1,6 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Darker",
+  "window.zoomLevel": 0,
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+}
