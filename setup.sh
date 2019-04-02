@@ -4,7 +4,7 @@ set -e -u
 # Configurations
 GHUSER=${GHUSER:-mks1412}
 REPO=${REPO:-ansible-macos}
-DEST=${DEST:-${HOME}/src/github/${GHUSER}}
+DEST=${DEST:-${HOME}/.ghq/github.com/${GHUSER}}
 DIR="${DEST}/${REPO}"
 SSH_KEY_TYPE=${SSH_KEY_TYPE:-ed25519}
 SSH_KEY_PATH=$HOME/.ssh/id_$SSH_KEY_TYPE
@@ -93,7 +93,7 @@ install_homebrew() {
 # Install packages for running Ansible playbook
 install_packages_for_ansible() {
   echo "Installing packages for running Ansible..."
-  brew install git ansible
+  brew install git ansible ghq
 }
 
 # Clone my GitHub repository
@@ -103,7 +103,7 @@ clone_repo() {
     return
   fi
 
-  git clone git@github.com:${GHUSER}/${REPO}.git ${DIR}
+  ghq get git@github.com:${GHUSER}/${REPO}.git
   cd ${DIR}
 }
 

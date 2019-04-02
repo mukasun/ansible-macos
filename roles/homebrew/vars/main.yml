@@ -6,6 +6,7 @@ homebrew:
     - direnv
     - fontconfig
     - git
+    - ghq
     - jq
     - nkf
     - node
