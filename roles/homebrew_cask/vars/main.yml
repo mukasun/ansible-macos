@@ -4,6 +4,7 @@ homebrew:
     - buo/cask-upgrade # useful to upgrade casks
   casks:
     - android-studio
+    - docker
     - google-cloud-sdk
     - google-chrome
     - google-japanese-ime
