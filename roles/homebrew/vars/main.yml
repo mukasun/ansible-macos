@@ -1,7 +1,6 @@
 homebrew:
   formula:
     - ansible
-    - awscli
     - colordiff
     - direnv
     - fontconfig

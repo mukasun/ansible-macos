@@ -1,7 +1,9 @@
 homebrew:
   taps:
-    - caskroom/versions # needed to install IntelliJ IDEA Community Edition
-    - buo/cask-upgrade # useful to upgrade casks
+    - homebrew/cask
+    - homebrew/cask-versions
+    - homebrew/cask-fonts
+    - homebrew/core
   casks:
     - android-studio
     - docker
@@ -12,7 +14,6 @@ homebrew:
     - iterm2
     - ngrok
     - postman
-    - sequel-pro
     - slack
     - spectacle
     - visual-studio-code
