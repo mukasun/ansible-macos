@@ -1,9 +1,9 @@
 - name: clone dotfiles repo
-  shell: 'ghq get git@github.com:{{ dotfiles.ghuser }}/{{ dotfiles.repo }}.git'
+  shell: "ghq get https://github.com/{{ dotfiles.ghuser }}/{{ dotfiles.repo }}.git"
   tags: dotfiles-clone
 
 - name: deploy each symlink of dotfiles into $HOME
   command: ./install
   args:
-    chdir: '~/.ghq/github.com/{{ dotfiles.ghuser }}/{{ dotfiles.repo }}'
+    chdir: "~/ghq/github.com/{{ dotfiles.ghuser }}/{{ dotfiles.repo }}"
   tags: dotfiles-symlink

@@ -1,16 +1,16 @@
 [
-	{
-		"name": "dotfiles",
-		"rootPath": "$home/.ghq/github.com/mks1412/dotfiles",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
-	{
-		"name": "ansible-macos",
-		"rootPath": "$home/.ghq/github.com/mks1412/ansible-macos",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	}
+  {
+    "name": "dotfiles",
+    "rootPath": "$home/ghq/github.com/mks1412/dotfiles",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
+    "name": "ansible-macos",
+    "rootPath": "$home/ghq/github.com/mks1412/ansible-macos",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  }
 ]

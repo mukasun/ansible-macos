@@ -4,7 +4,7 @@ set -e -u
 # Configurations
 GHUSER=${GHUSER:-mks1412}
 REPO=${REPO:-ansible-macos}
-DEST=${DEST:-${HOME}/.ghq/github.com/${GHUSER}}
+DEST=${DEST:-${HOME}/ghq/github.com/${GHUSER}}
 DIR="${DEST}/${REPO}"
 SSH_KEY_TYPE=${SSH_KEY_TYPE:-ed25519}
 SSH_KEY_PATH=$HOME/.ssh/id_$SSH_KEY_TYPE
@@ -103,7 +103,8 @@ clone_repo() {
     return
   fi
 
-  ghq get git@github.com:${GHUSER}/${REPO}.git
+  ghq get https://github.com/${GHUSER}/${REPO}.git
+
   cd ${DIR}
 }
 
