@@ -1,0 +1,4 @@
+- name: Setup for Karabiner-Elements
+  copy:
+    src: kana-cheatsheet.json
+    dest: ~/.config/karabiner/assets/complex_modifications

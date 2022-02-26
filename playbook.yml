@@ -10,9 +10,13 @@
       tags: homebrew
     - role: homebrew_cask
       tags: homebrew_cask
+    - role: karabiner
+      tags: karabiner
     - role: macos
       tags: macos
     - role: vscode
       tags: vscode
     - role: zsh
       tags: zsh
+  vars:
+    homebrew_path: /opt/homebrew/bin/brew
