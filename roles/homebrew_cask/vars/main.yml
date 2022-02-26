@@ -6,14 +6,21 @@ homebrew:
     - homebrew/core
   casks:
     - android-studio
+    - clipy
+    - deepl
     - docker
     - google-cloud-sdk
     - google-chrome
     - google-japanese-ime
     - istat-menus
     - iterm2
+    - itsycal
     - ngrok
+    - notion
     - postman
+    - rectangle
     - slack
-    - spectacle
+    - spark
+    - tableplus
     - visual-studio-code
+    - zoom

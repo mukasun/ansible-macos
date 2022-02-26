@@ -1,6 +1,5 @@
 {
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Material Theme Darker",
   "workbench.startupEditor": "none",
   "window.zoomLevel": 0,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
@@ -8,6 +7,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
   "editor.dragAndDrop": false,
+  "editor.suggestSelection": "first",
   "files.eol": "\n",
   "files.autoGuessEncoding": true,
   "files.insertFinalNewline": true,

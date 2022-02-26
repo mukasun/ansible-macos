@@ -1,0 +1,4 @@
+- name: mas install
+  command: mas install '{{ item.id }}'
+  with_items: "{{ apps }}"
+  tags: mas

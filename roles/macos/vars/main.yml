@@ -30,14 +30,14 @@ macos_defaults:
     key: com.apple.trackpad.scaling
     type: float
     value: 1
-  
+
   # Prevent photos from opening automatically when devices was plugged in
   - domain: com.apple.ImageCapture
     key: disableHotPlug
     type: bool
     value: true
 
-  # Disable Dashboard 
+  # Disable Dashboard
   - domain: com.apple.dashboard
     key: mcx-disabled
     type: bool
@@ -48,7 +48,7 @@ macos_defaults:
     key: DateFormat
     type: string
     value: "M\u6708d\u65e5(EEE) H:mm:ss"
-  
+
   #===== Dock =====
   # Turn hiding on
   - domain: com.apple.dock

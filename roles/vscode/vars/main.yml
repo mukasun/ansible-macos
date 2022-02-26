@@ -3,7 +3,14 @@ extensions:
   - equinusocio.vsc-material-theme
   - coenraadS.bracket-pair-colorizer
   - alefragnani.project-manager
-
-  # git
+  - janisdd.vscode-edit-csv
+  - streetsidesoftware.code-spell-checker
+  - ms-azuretools.vscode-docker
+  - editorconfig.editorconfig
+  - bierner.markdown-preview-github-styles
+  - esbenp.prettier-vscode
+  - mohsen1.prettify-json
+  - wakatime.vscode-wakatime
+  - gruntfuggly.todo-tree
   - eamodio.gitlens
   - donjayamanne.githistory

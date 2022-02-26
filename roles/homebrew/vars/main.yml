@@ -1,18 +1,16 @@
 homebrew:
   formula:
+    - anyenv
     - ansible
     - colordiff
     - direnv
     - fontconfig
     - git
     - ghq
+    - imagemagick
     - jq
+    - mas
     - nkf
-    - node
-    - nodebrew
     - peco
-    - pyenv
-    - rbenv
     - tree
     - yarn
-    - zsh

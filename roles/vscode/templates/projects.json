@@ -3,14 +3,14 @@
     "name": "dotfiles",
     "rootPath": "$home/ghq/github.com/mks1412/dotfiles",
     "paths": [],
-    "group": "",
+    "tags": ["private"],
     "enabled": true
   },
   {
     "name": "ansible-macos",
     "rootPath": "$home/ghq/github.com/mks1412/ansible-macos",
     "paths": [],
-    "group": "",
+    "tags": ["private"],
     "enabled": true
   }
 ]

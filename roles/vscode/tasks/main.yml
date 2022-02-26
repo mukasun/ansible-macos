@@ -6,7 +6,7 @@
 
 - name: install extension
   raw: "code --install-extension {{ item }}"
-  with_items: '{{ extensions }}'
+  with_items: "{{ extensions }}"
 
 - name: deploy projects.json
   template:

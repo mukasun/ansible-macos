@@ -5,7 +5,7 @@
 
 - name: install Homebrew formula
   homebrew:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: latest
-  with_items: '{{ homebrew.formula }}'
+  with_items: "{{ homebrew.formula }}"
   tags: homebrew-install
