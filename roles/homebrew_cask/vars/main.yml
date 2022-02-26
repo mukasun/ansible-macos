@@ -6,6 +6,7 @@ homebrew:
     - homebrew/core
   casks:
     - android-studio
+    - appcleaner
     - clipy
     - deepl
     - docker
@@ -13,7 +14,6 @@ homebrew:
     - google-cloud-sdk
     - google-chrome
     - google-japanese-ime
-    - istat-menus
     - iterm2
     - itsycal
     - karabiner-elements

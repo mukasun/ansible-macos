@@ -14,6 +14,8 @@
       tags: karabiner
     - role: macos
       tags: macos
+    - role: mas
+      tags: mas
     - role: vscode
       tags: vscode
     - role: zsh

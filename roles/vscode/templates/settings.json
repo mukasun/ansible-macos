@@ -2,7 +2,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "window.zoomLevel": 0,
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
