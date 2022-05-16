@@ -2,7 +2,7 @@
 set -e -u
 
 # Configurations
-GHUSER=${GHUSER:-mks1412}
+GHUSER=${GHUSER:-mukasun}
 REPO=${REPO:-ansible-macos}
 DEST=${DEST:-${HOME}/ghq/github.com/${GHUSER}}
 DIR="${DEST}/${REPO}"

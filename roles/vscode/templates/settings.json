@@ -8,6 +8,8 @@
   "editor.renderControlCharacters": true,
   "editor.dragAndDrop": false,
   "editor.suggestSelection": "first",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
   "files.eol": "\n",
   "files.autoGuessEncoding": true,
   "files.insertFinalNewline": true,

@@ -1,14 +1,14 @@
 [
   {
     "name": "dotfiles",
-    "rootPath": "$home/ghq/github.com/mks1412/dotfiles",
+    "rootPath": "$home/ghq/github.com/mukasun/dotfiles",
     "paths": [],
     "tags": ["private"],
     "enabled": true
   },
   {
     "name": "ansible-macos",
-    "rootPath": "$home/ghq/github.com/mks1412/ansible-macos",
+    "rootPath": "$home/ghq/github.com/mukasun/ansible-macos",
     "paths": [],
     "tags": ["private"],
     "enabled": true

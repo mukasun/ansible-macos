@@ -1,7 +1,6 @@
 extensions:
   - pKief.material-icon-theme
   - equinusocio.vsc-material-theme
-  - coenraadS.bracket-pair-colorizer
   - alefragnani.project-manager
   - janisdd.vscode-edit-csv
   - streetsidesoftware.code-spell-checker
