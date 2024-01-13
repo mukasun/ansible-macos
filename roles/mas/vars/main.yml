@@ -1,7 +1,5 @@
 apps:
   - { name: "LINE", id: "539883307" }
-  - { name: "TweetDeck", id: "485812721" }
-  - { name: "1Password 7", id: "1333542190" }
   - { name: "Spark", id: "1176895641" }
   - { name: "RunCat", id: "1429033973" }
   - { name: "Xcode", id: "497799835" }
