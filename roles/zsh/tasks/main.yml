@@ -1,3 +1,9 @@
+- name: deploy .p10k.zsh
+  template:
+    src: .p10k.zsh
+    dest: "~/.p10k.zsh"
+    mode: 0644
+
 - name: clone prezto repo
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
