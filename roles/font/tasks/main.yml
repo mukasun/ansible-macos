@@ -1,18 +1,15 @@
 - name: tap extra repositories
   homebrew_tap:
-    tap: sanemat/font
+    tap: homebrew/cask-fonts
     state: present
   tags: homebrew-tap
 
-- name: install Recty font
+- name: install PlemolJP font
   homebrew:
-    name: ricty
-    state: present
-    install_options: with-powerline
-  tags: recty-install
-
-- name: depoy font file
-  shell: cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
-
-- name: refresh font file cache
-  shell: fc-cache -vf
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - font-plemol-jp
+    - font-plemol-jp-nf
+    - font-plemol-jp-hs
+  tags: plemol-jp-install
