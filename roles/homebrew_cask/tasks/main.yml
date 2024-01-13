@@ -11,7 +11,7 @@
   tags: homebrew-tap
 
 - name: install Homebrew Casks
-  homebrew_cask:
+  homebrew:
     name: "{{ item }}"
     state: present
   with_items: "{{ homebrew.casks }}"

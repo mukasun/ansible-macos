@@ -73,6 +73,7 @@ install_command_line_tools() {
 
   echo "Installing Command Line Tools..."
   echo "*** If a dialog is shown, push 'Install' button to install Command Line Tools before proceeding! ***"
+  sudo softwareupdate --install-rosetta --agree-to-license
   xcode-select --install
 }
 

@@ -1,14 +1,10 @@
 homebrew:
   taps:
-    - homebrew/cask
-    - homebrew/cask-versions
     - homebrew/cask-fonts
-    - homebrew/core
   casks:
     - android-studio
     - appcleaner
     - clipy
-    - deepl
     - docker
     - figma
     - google-cloud-sdk
@@ -22,7 +18,6 @@ homebrew:
     - postman
     - rectangle
     - slack
-    - spark
     - tableplus
     - visual-studio-code
     - zoom
