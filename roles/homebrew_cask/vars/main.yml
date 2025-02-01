@@ -6,18 +6,18 @@ homebrew:
     - appcleaner
     - clipy
     - docker
+    - drawio
     - figma
     - google-cloud-sdk
     - google-chrome
     - google-japanese-ime
-    - iterm2
     - itsycal
     - karabiner-elements
     - ngrok
-    - notion
     - postman
     - rectangle
     - slack
     - tableplus
     - visual-studio-code
+    - warp
     - zoom
